@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_centerInParent="true"
+    android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
+    <ImageView
+        android:id="@+id/empty_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="当前无数据"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+        android:src="@drawable/empty" />
+
+    <TextView
+        android:id="@+id/empty_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="#909090"
+        android:textSize="15sp" />
+</LinearLayout>
