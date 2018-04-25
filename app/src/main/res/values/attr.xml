@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LoadingLayout">
+        <attr name="empty_img" format="reference" />
+        <attr name="empty_txt" format="string" />
+    </declare-styleable>
+
+</resources>

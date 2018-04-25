@@ -1,14 +1,12 @@
 package com.codelang.loadinglayout;
 
-import android.app.Activity;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.util.AttributeSet;
-import android.util.LongSparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.LinearLayout;
 
 import java.lang.reflect.Method;
 
@@ -33,6 +31,16 @@ public class LoadingLayout extends ConstraintLayout {
     private View emptyView;
 
     /**
+     * 空白页面的图片
+     */
+    private int emptyResource;
+    /**
+     * 空白页面的文字
+     */
+    private String strEmptyTxt;
+
+
+    /**
      * 判断是否显示主布局的标识
      */
     public boolean isContentView = false;
@@ -47,6 +55,12 @@ public class LoadingLayout extends ConstraintLayout {
 
     public LoadingLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.LoadingLayout);
+        strEmptyTxt = ta.getString(R.styleable.LoadingLayout_empty_txt);
+        emptyResource = ta.getResourceId(R.styleable.LoadingLayout_empty_img, R.drawable.empty);
+        ta.recycle();
+
         initView(context);
     }
 
@@ -98,10 +112,12 @@ public class LoadingLayout extends ConstraintLayout {
         }
     }
 
-    /**
-     * 显示主布局
-     */
+
     public void showContentView() {
+        //  注 ： removeView这三个地方，在页面完全加载出来了，是有必要remove掉这几个没用的view
+        // 测试为了配合reset方法，就改成了setVisible(View.GONE)
+        //正式使用的话，最好打开remove这个三个，然后注释掉下面的三个setVisible(View.GONE)
+
 //        removeView(errorView);
 //        removeView(emptyView);
 //        removeView(loadingView);
@@ -117,11 +133,11 @@ public class LoadingLayout extends ConstraintLayout {
     }
 
     /**
-     * 显示证咋加载错误布局
+     * 显示加载错误布局
      */
+
     public void showErrorView() {
         if (isContentView) return;
-
         for (int i = 0; i < getChildCount(); i++) {
             View view = getChildAt(i);
             view.setVisibility(View.GONE);
@@ -132,15 +148,14 @@ public class LoadingLayout extends ConstraintLayout {
     /**
      * 显示正在加载布局
      */
+
     public void showLoadingView() {
         if (isContentView) return;
-
         for (int i = 0; i < getChildCount(); i++) {
             View view = getChildAt(i);
             view.setVisibility(View.GONE);
         }
         loadingView.setVisibility(View.VISIBLE);
-
         //判断当前是否有网络
         if (!NetworkUtil.isNetworkConnected(context)) {
             showErrorView();
@@ -151,16 +166,15 @@ public class LoadingLayout extends ConstraintLayout {
     /**
      * 显示空布局
      */
+
     public void showEmptyView() {
         if (isContentView) return;
-
         for (int i = 0; i < getChildCount(); i++) {
             View view = getChildAt(i);
             view.setVisibility(View.GONE);
         }
         emptyView.setVisibility(View.VISIBLE);
     }
-
 
     public void reset() {
 //        addView(errorView);
@@ -169,5 +183,4 @@ public class LoadingLayout extends ConstraintLayout {
 
         isContentView = false;
     }
-
 }

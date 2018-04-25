@@ -35,6 +35,11 @@
         android:onClick="click"
         android:text="重置" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="每测试一个功能，记得点重置按钮" />
 
     <com.codelang.loadinglayout.LoadingLayout
         android:id="@+id/main_loading"

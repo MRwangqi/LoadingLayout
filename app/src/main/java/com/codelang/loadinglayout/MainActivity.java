@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         loadingLayout = (LoadingLayout) findViewById(R.id.main_loading);
-
         type = 1;
         pullNet();
     }
@@ -41,10 +40,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.main_reset:
                 loadingLayout.reset();
-                break;
             default:
         }
     }
+
 
     /**
      * 模拟请求网络
