@@ -12,28 +12,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="click"
-        android:text="显示布局内容" />
+        android:text="模拟正在加载_显示加载成功" />
 
     <Button
         android:id="@+id/main_error"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="click"
-        android:text="显示错误布局" />
+        android:text="模拟正在加载_显示加载错误" />
 
     <Button
         android:id="@+id/main_empty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="click"
-        android:text="显示空布局" />
+        android:text="模拟正在加载_显示加载空布局" />
 
     <Button
-        android:id="@+id/main_load"
+        android:id="@+id/main_reset"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="click"
-        android:text="显示正在加载布局" />
+        android:text="重置" />
+
 
     <com.codelang.loadinglayout.LoadingLayout
         android:id="@+id/main_loading"
@@ -41,13 +42,13 @@
         android:layout_height="match_parent">
 
         <TextView
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="显示网络加载后的内容" />
+            android:text="显示网络加载后的内容"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </com.codelang.loadinglayout.LoadingLayout>
 

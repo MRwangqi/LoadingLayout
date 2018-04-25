@@ -183,4 +183,12 @@ public class LoadingLayout extends ConstraintLayout {
 
 ```
 
-代码十分的简短，逻辑也特别的清晰，如果 想扩展的话，也可以直接在LoadingLayout里面直接处理，比如在showLoadingView的时候做一下网络判断处理，如果无网络的话，显示错误布局，告知用户打开网络，也有可能在显示错误布局的时候，会有点击再次加载功能，这时候，我们就需要在LoadingLayout里面增加接口回调功能，此处就不展示了，下载源码的链接
+代码十分的简短，逻辑也特别的清晰，如果 想扩展的话，也可以直接在LoadingLayout里面直接处理，比如在showLoadingView的时候做一下网络判断处理，如果无网络的话，显示错误布局，告知用户打开网络，也有可能在显示错误布局的时候，会有点击再次加载功能，这时候，我们就需要在LoadingLayout里面增加接口回调功能，此处就不展示了，下载源码的链接[github](https://github.com/MRwangqi/LoadingLayout)
+
+
+>总结
+
+
+编码前的思路整理是项目开发的重中之重，学会思考才能更好的编程
+
+<center><p>qq群号492386431<p>关注公众号codelang<p>![](http://oxp6pf88h.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81zing.png)</center>
