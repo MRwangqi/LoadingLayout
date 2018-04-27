@@ -113,3 +113,7 @@ public class LoadingLayout extends CallBack {
     }
 
 ```
+
+### 效果图
+
+![](pic.gif)
