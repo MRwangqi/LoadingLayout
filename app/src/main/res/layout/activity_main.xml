@@ -12,49 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="click"
-        android:text="模拟正在加载_显示加载成功" />
+        android:text="Fragment+Viewpager+Empty" />
 
-    <Button
-        android:id="@+id/main_error"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="click"
-        android:text="模拟正在加载_显示加载错误" />
-
-    <Button
-        android:id="@+id/main_empty"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="click"
-        android:text="模拟正在加载_显示加载空布局" />
-
-    <Button
-        android:id="@+id/main_reset"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="click"
-        android:text="重置" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="每测试一个功能，记得点重置按钮" />
+        android:text="内容" />
 
-    <com.codelang.loadinglayout.LoadingLayout
-        android:id="@+id/main_loading"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="显示网络加载后的内容"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </com.codelang.loadinglayout.LoadingLayout>
 
 </LinearLayout>
