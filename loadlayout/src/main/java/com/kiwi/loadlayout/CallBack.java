@@ -1,4 +1,4 @@
-package com.codelang.loadinglayout.loadingUtils;
+package com.kiwi.loadlayout;
 
 import android.content.Context;
 import android.view.LayoutInflater;

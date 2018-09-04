@@ -1,13 +1,13 @@
 package com.codelang.loadinglayout.vp_fragment;
 
 
-import android.support.v4.app.Fragment;
-import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
-import com.codelang.loadinglayout.loadingUtils.annoation.ErrorClick;
+import com.codelang.loadinglayout.WQLoadingLayout;
+import com.kiwi.loadlayout.WQLoad;
+import com.kiwi.loadlayout.annoation.ErrorClick;
 import com.codelang.loadinglayout.R;
-import com.codelang.loadinglayout.loadingUtils.WQLoad;
-import com.codelang.loadinglayout.loadingUtils.layout.WQLoadingLayout;
 
 /**
  * @author wangqi
@@ -17,7 +17,7 @@ import com.codelang.loadinglayout.loadingUtils.layout.WQLoadingLayout;
 public class TabFragment extends BaseFragment {
 
     WQLoad wqLoad;
-
+    TextView txContent;
 
     @Override
     public int getLayoutId() {
@@ -26,6 +26,7 @@ public class TabFragment extends BaseFragment {
 
     @Override
     public void lazyLoad() {
+        txContent = mView.findViewById(R.id.tab_tx);
 
         wqLoad = new WQLoad.Builder(getActivity())
                 .addLoadingCallBack(new WQLoadingLayout(getActivity()))
@@ -49,6 +50,7 @@ public class TabFragment extends BaseFragment {
             @Override
             public void run() {
                 wqLoad.showContentView();
+                txContent.setVisibility(View.VISIBLE);
             }
         }, 2000);
     }

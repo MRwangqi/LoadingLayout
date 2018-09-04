@@ -1,4 +1,4 @@
-package com.codelang.loadinglayout.loadingUtils.annoation;
+package com.kiwi.loadlayout.annoation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

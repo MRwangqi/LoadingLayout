@@ -5,11 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.codelang.loadinglayout.loadingUtils.annoation.ErrorClick;
-import com.codelang.loadinglayout.loadingUtils.WQLoad;
-import com.codelang.loadinglayout.loadingUtils.layout.EmptyLayout;
-import com.codelang.loadinglayout.loadingUtils.layout.ErrorLayout;
-import com.codelang.loadinglayout.loadingUtils.layout.LoadingLayout;
+import com.kiwi.loadlayout.WQLoad;
+import com.kiwi.loadlayout.annoation.ErrorClick;
+import com.kiwi.loadlayout.layout.EmptyLayout;
+import com.kiwi.loadlayout.layout.ErrorLayout;
+import com.kiwi.loadlayout.layout.LoadingLayout;
 import com.codelang.loadinglayout.vp_fragment.TabActivity;
 
 /**
@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         wqLoad.init(this);
 
         wqLoad.showLoadingView();
+
+
         findViewById(R.id.main_content).postDelayed(new Runnable() {
             @Override
             public void run() {

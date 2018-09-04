@@ -4,7 +4,6 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.codelang.loadinglayout.R;
@@ -12,10 +11,7 @@ import com.codelang.loadinglayout.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import me.yokeyword.fragmentation.ExtraTransaction;
-import me.yokeyword.fragmentation.ISupportActivity;
-import me.yokeyword.fragmentation.SupportActivityDelegate;
-import me.yokeyword.fragmentation.anim.FragmentAnimator;
+
 
 public class TabActivity extends FragmentActivity {
 
@@ -30,8 +26,8 @@ public class TabActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab);
-        tabLayout = (TabLayout) findViewById(R.id.tablayout);
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        tabLayout =  findViewById(R.id.tablayout);
+        viewPager =  findViewById(R.id.viewpager);
 
         initFragmentList();
         viewPager.setAdapter(new MyViewPagerAdapter(getSupportFragmentManager(), list, title));

@@ -1,14 +1,14 @@
-package com.codelang.loadinglayout.loadingUtils;
+package com.kiwi.loadlayout;
 
 import android.app.Activity;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.codelang.loadinglayout.loadingUtils.annoation.ErrorClick;
-import com.codelang.loadinglayout.loadingUtils.layout.EmptyLayout;
-import com.codelang.loadinglayout.loadingUtils.layout.ErrorLayout;
-import com.codelang.loadinglayout.loadingUtils.layout.LoadingLayout;
+import com.kiwi.loadlayout.annoation.ErrorClick;
+import com.kiwi.loadlayout.layout.EmptyLayout;
+import com.kiwi.loadlayout.layout.ErrorLayout;
+import com.kiwi.loadlayout.layout.LoadingLayout;
 
 import java.lang.reflect.Method;
 
@@ -30,7 +30,6 @@ public class WQLoad {
         CallBack emptyCallBack;
         CallBack errorCallBack;
         CallBack loadingCallBack;
-
         public Builder(Context context) {
             emptyCallBack = new EmptyLayout(context);
             errorCallBack = new ErrorLayout(context);
@@ -101,6 +100,7 @@ public class WQLoad {
         } else {
             return;
         }
+
 
         emptyView = builder.emptyCallBack.getRootView();
         loadingView = builder.loadingCallBack.getRootView();

@@ -1,11 +1,11 @@
-package com.codelang.loadinglayout.loadingUtils.layout;
+package com.kiwi.loadlayout.layout;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import com.codelang.loadinglayout.R;
-import com.codelang.loadinglayout.loadingUtils.CallBack;
+import com.kiwi.loadlayout.CallBack;
+import com.kiwi.loadlayout.R;
 
 /**
  * @author wangqi
